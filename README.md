@@ -77,14 +77,14 @@ Before you begin, you need to install the following tools:
 
 ## Quickstart
 
-To get started with Scaffold-ETH 2, follow the steps below:
+To get started with contributing  
 
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
-yarn install
+git clone https://github.com/EthGlobalLFGHO/ArbiGHOst
+cd ArbiGHOst
+yarn 
 ```
 
 2. Run a local network in the first terminal:
