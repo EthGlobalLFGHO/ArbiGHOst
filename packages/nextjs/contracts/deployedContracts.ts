@@ -8,6 +8,7 @@ const deployedContracts = {
   11155111: {
     GhoLiquidationReceiver: {
       address: "0x40FD1Ba522cab983C98348b4B0AA12699089aCA9",
+
       abi: [
         {
           inputs: [
@@ -86,6 +87,82 @@ const deployedContracts = {
       inheritedFunctions: {
         onFlashLoan: "@openzeppelin/contracts/interfaces/IERC3156FlashBorrower.sol",
       },
+    },
+    GhoLiquidator: {
+      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_aavePoolAddress",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_ghoFlashMintAddress",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_gholiquidationReceiver",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          inputs: [],
+          name: "aavePoolAddress",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "gholiquidationReceiver",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_user",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_collatoralToken",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "_amount",
+              type: "uint256",
+            },
+          ],
+          name: "mintAndLiquidate",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
     },
   },
 } as const;

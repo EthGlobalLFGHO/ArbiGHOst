@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 //import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 //import { appChains } from "~~/services/web3/wagmiConnectors";
 import { WagmiConfig, createConfig } from "wagmi";
-import { arbitrum, mainnet, optimism, polygon } from "wagmi/chains";
+import { arbitrum, mainnet, optimism, polygon, sepolia } from "wagmi/chains";
 //import { WagmiConfig } from "wagmi";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
@@ -22,7 +22,7 @@ const config = createConfig(
     appName: "ConnectKit Next.js demo",
     //infuraId: process.env.NEXT_PUBLIC_INFURA_ID,
     alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID,
-    chains: [mainnet, polygon, optimism, arbitrum],
+    chains: [mainnet, polygon, optimism, arbitrum, sepolia],
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
   }),
 );
