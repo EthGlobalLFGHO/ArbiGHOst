@@ -4,6 +4,90 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  11155111: {
+    GhoLiquidationReceiver: {
+      address: "0x40FD1Ba522cab983C98348b4B0AA12699089aCA9",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_aavePoolAddress",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_initiator",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_priceContract",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "initiator",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "fee",
+              type: "uint256",
+            },
+            {
+              internalType: "bytes",
+              name: "data",
+              type: "bytes",
+            },
+          ],
+          name: "onFlashLoan",
+          outputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "priceContract",
+          outputs: [
+            {
+              internalType: "contract ETH_USD",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        onFlashLoan: "@openzeppelin/contracts/interfaces/IERC3156FlashBorrower.sol",
+      },
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;

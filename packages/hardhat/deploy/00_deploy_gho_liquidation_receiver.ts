@@ -37,7 +37,7 @@ const deployGhoLiquidationReceiver: DeployFunction = async function (hre: Hardha
 
   // Get the deployed contract to interact with it after deploying.
   const GhoLiquidationReceiver = await hre.ethers.getContract<Contract>("GhoLiquidationReceiver", deployer);
-  console.log("deployed at address: ", GhoLiquidationReceiver.getAddress());
+  console.log("deployed at address: ", await GhoLiquidationReceiver.getAddress());
 };
 
 export default deployGhoLiquidationReceiver;
